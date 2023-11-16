@@ -1,0 +1,2 @@
+local key = "VECTOR-KEY-AMBUSH"
+return key
