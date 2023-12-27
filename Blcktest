@@ -28,7 +28,7 @@ mainopens.Parent = mainopen
  loki.BackgroundTransparency = 1.000
  loki.Position = UDim2.new(-0.0529999994, 0, -0.244000003, 0)
  loki.Size = UDim2.new(0, 69, 0, 62)
- loki.Image = "rbxassetid://12426728665"
+ loki.Image = "rbxassetid://15770094150"
  
  posto.Name = "posto"
  posto.Parent = mainopen
@@ -3744,9 +3744,10 @@ getgenv().HyperCahayas = function(p)
     end)
     
 
-local Library = Update:Window("Ganteng Hub","",Enum.KeyCode.RightControl);
+local Library = Update:Window("Perd Hub","",Enum.KeyCode.RightControl);
 
 local H = Library:Tab("Info","14602166612")
+local XM = Library:Tab("X-Mas", "019382828")
 local Main = Library:Tab("Main","14614308263")
 local M = Library:Tab("Item","14614311945")
 local Ss = Library:Tab("Stats","14614313605")
@@ -3761,24 +3762,17 @@ local Misc = Library:Tab("Misc","11156061121")
 local Time = H:Label("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 
-H:Label("ðŸŒ isnahamzah.tech")
-H:Label("ðŸŽ² discord.gg/isnahamzah")
-H:Button("SUBSCRIBE! YT ISNAHAMZAH ",function()
-setclipboard("https://youtube.com/@isnahamzah")
+H:Label("https://discord.com/invite/9DF36eU8M2")
+H:Button("SUBSCRIBE! YT RAZIEL ",function()
+setclipboard("https://youtube.com/@Raziel390?si=NqonXfBZEHpizShw")
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://14601663040";
-      Title = "isnahamzah", 
-      Text = "Makasii sayangku!!";
-})
-game.StarterGui:SetCore("SendNotification", {
-    Icon = "rbxassetid://14601663040";
-    Title = "isnahamzah", 
-    Text = "ENG: Like a Thank You";
+    Icon = "rbxassetid://";
+    Title = "Perd", 
+    Text = "Thank You";
 })
 end)
 
-H:Label("WORKING ALL EXECUTOR! âœ… ")
-H:Label("#STAYGANTENG ðŸ˜Ž ")
+H:Label("WORKING ALL EXECUTOR! ✅ ")
 
 H:Button("Click For Send Suggestion ",function()
 local ScreenGui = Instance.new("ScreenGui")
@@ -3897,7 +3891,7 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 else
     game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://14601663040";
+      Icon = "rbxassetid://";
       Title = "Thanks For Suggest", 
       Text = "If U Troll Suggestion Will Block Ur Id Forever !!";
     })
@@ -3953,12 +3947,6 @@ close_button.MouseButton1Click:Connect(function()
     frame.Parent = nil
 end)
 end)
-
-H:Label(" â€¼ï¸ IF U TROLL SUGGESTION WILL BLOCK\n UR ID PLAYER SO U CANT USE THE\n SCRIPT AGAIN â€¼ï¸ ")
-
-H:Label(" [===========================] ") 
-
-H:Label(" â€¼ï¸ KALAU KAMU NGETROLL DENGAN\n MEBGIRIM KATA KATA TIDAK BERGUNA\n ID KAMU BAKALAN KAMI BLOKIRâ€¼ï¸ ")
 
 H:Seperator("Status")
     
@@ -4049,58 +4037,58 @@ H:Seperator("Status")
 
 H:Seperator(" Sword ")
 
-local Saber = H:Label("âŒ: Saber")
-local Rengoku = H:Label("âŒ: Rengoku")
-local Midnight_Blade = H:Label("âŒ: Midnight Blade")
-local Dragon_Trident = H:Label("âŒ: Dragon Trident")
-local Yama = H:Label("âŒ: Yama")
-local Buddy_Sword = H:Label("âŒ: Buddy Sword")
-local Canvander = H:Label("âŒ: Canvander")
-local Twin_Hooks = H:Label("âŒ: Twin Hooks")
-local Spikey_Trident = H:Label("âŒ: Spikey Trident")
-local Hallow_Scythe = H:Label("âŒ: Hallow Scythe")
-local Dark_Dagger = H:Label("âŒ: Dark Dagger")
-local Tushita = H:Label("âŒ: Tushita")
+local Saber = H:Label("❌: Saber")
+local Rengoku = H:Label("❌: Rengoku")
+local Midnight_Blade = H:Label("❌: Midnight Blade")
+local Dragon_Trident = H:Label("❌: Dragon Trident")
+local Yama = H:Label("❌: Yama")
+local Buddy_Sword = H:Label("❌: Buddy Sword")
+local Canvander = H:Label("❌: Canvander")
+local Twin_Hooks = H:Label("❌: Twin Hooks")
+local Spikey_Trident = H:Label("❌: Spikey Trident")
+local Hallow_Scythe = H:Label("❌: Hallow Scythe")
+local Dark_Dagger = H:Label("❌: Dark Dagger")
+local Tushita = H:Label("❌: Tushita")
 
 spawn(function()
     while task.wait() do
         pcall(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                 if v.Name == "Saber" then
-                    Saber:Set("âœ…: Saber")
+                    Saber:Set("✅: Saber")
                 end
                 if v.Name == "Rengoku" then
-                    Rengoku:Set("âœ…: Rengoku")
+                    Rengoku:Set("✅: Rengoku")
                 end
                 if v.Name == "Midnight Blade" then
-                    Midnight_Blade:Set("âœ…: Midnight Blade")
+                    Midnight_Blade:Set("✅: Midnight Blade")
                 end
                 if v.Name == "Dragon Trident" then
-                    Dragon_Trident:Set("âœ…: Dragon Trident")
+                    Dragon_Trident:Set("✅: Dragon Trident")
                 end
                 if v.Name == "Yama" then
-                    Yama:Set("âœ…: Yama")
+                    Yama:Set("✅: Yama")
                 end
                 if v.Name == "Buddy Sword" then
-                    Buddy_Sword:Set("âœ…: Buddy Sword")
+                    Buddy_Sword:Set("✅: Buddy Sword")
                 end
                 if v.Name == "Canvander" then
-                    Canvander:Set("âœ…: Canvander")
+                    Canvander:Set("✅: Canvander")
                 end
                 if v.Name == "Twin Hooks" then
-                    Twin_Hooks:Set("âœ…: Twin Hooks")
+                    Twin_Hooks:Set("✅: Twin Hooks")
                 end
                 if v.Name == "Spikey Trident" then
-                    Spikey_Trident:Set("âœ…: Spikey Trident")
+                    Spikey_Trident:Set("✅: Spikey Trident")
                 end
                 if v.Name == "Hallow Scythe" then
-                    Hallow_Scythe:Set("âœ…: Hallow Scythe")
+                    Hallow_Scythe:Set("✅: Hallow Scythe")
                 end
                 if v.Name == "Dark Dagger" then
-                    Dark_Dagger:Set("âœ…: Dark Dagger")
+                    Dark_Dagger:Set("✅: Dark Dagger")
                 end
                 if v.Name == "Tushita" then
-                    Tushita:Set("âœ…: Tushita")
+                    Tushita:Set("✅: Tushita")
                  end
             end
         end)
@@ -4109,50 +4097,50 @@ end)
 
 H:Seperator("Quest")
 
-local Bartilo_Quest = H:Label("âŒ: Bartilo Quest")
-local Don_Swan_Quest = H:Label("âŒ: Don Swan Quest")
-local Kill_Don_Swan = H:Label("âŒ: Kill Don Swan")
+local Bartilo_Quest = H:Label("❌: Bartilo Quest")
+local Don_Swan_Quest = H:Label("❌: Don Swan Quest")
+local Kill_Don_Swan = H:Label("❌: Kill Don Swan")
 
 spawn(function()
     while task.wait() do
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo") == 3 then
-            Bartilo_Quest:Set("âœ…: Bartilo Quest")
+            Bartilo_Quest:Set("✅: Bartilo Quest")
         end
 
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess == nil then
             --Nothing
         else
-            Don_Swan_Quest:Set("âœ…: Don Swan Quest")
+            Don_Swan_Quest:Set("✅: Don Swan Quest")
         end
 
         if game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("ZQuestProgress", "Check") == 1 then
-            Kill_Don_Swan:Set("âœ…: Kill Don Swan")
+            Kill_Don_Swan:Set("✅: Kill Don Swan")
         end
     end
 end)
 
 H:Seperator("Sword Legendary")
 
-local Shisui = H:Label("âŒ: Shisui")
-local Saddi = H:Label("âŒ: Saddi")
-local Wando = H:Label("âŒ: Wando")
-local True_Triple_Katana = H:Label("âŒ: True Triple Katana")
+local Shisui = H:Label("❌: Shisui")
+local Saddi = H:Label("❌: Saddi")
+local Wando = H:Label("❌: Wando")
+local True_Triple_Katana = H:Label("❌: True Triple Katana")
 
 spawn(function()
     while task.wait() do
         pcall(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                 if v.Name == "Shisui" then
-                    Shisui:Set("âœ…: Shisui")
+                    Shisui:Set("✅: Shisui")
                 end
                 if v.Name == "Saddi" then
-                    Saddi:Set("âœ…: Saddi")
+                    Saddi:Set("✅: Saddi")
                 end
                 if v.Name == "Wando" then
-                    Wando:Set("âœ…: Wando")
+                    Wando:Set("✅: Wando")
                 end
                 if v.Name == "True Triple Katana" then
-                    True_Triple_Katana:Set("âœ…: True Triple Katana")
+                    True_Triple_Katana:Set("✅: True Triple Katana")
                 end
             end
         end)
@@ -4161,51 +4149,51 @@ end)
 
 H:Seperator("Melee")
 
-local Superhuman = H:Label("âŒ: Superhuman")
-local Death_Step = H:Label("âŒ: Death Step")
-local Sharkman_Karate = H:Label("âŒ: Sharkman Karate")
-local Electric_Claw = H:Label("âŒ: Electric Claw")
-local Dragon_Talon = H:Label("âŒ: Dragon Talon")
-local God_Human = H:Label("âŒ: God Human")
+local Superhuman = H:Label("❌: Superhuman")
+local Death_Step = H:Label("❌: Death Step")
+local Sharkman_Karate = H:Label("❌: Sharkman Karate")
+local Electric_Claw = H:Label("❌: Electric Claw")
+local Dragon_Talon = H:Label("❌: Dragon Talon")
+local God_Human = H:Label("❌: God Human")
 
 spawn(function()
     while task.wait() do
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman",true) == 1 then
-            Superhuman:Set("âœ…: Superhuman")
+            Superhuman:Set("✅: Superhuman")
         end
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep",true) == 1 then
-            Death_Step:Set("âœ…: Death Step")
+            Death_Step:Set("✅: Death Step")
         end
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) == 1 then
-            Sharkman_Karate:Set("âœ…: Sharkman Karate")
+            Sharkman_Karate:Set("✅: Sharkman Karate")
         end
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw",true) == 1 then
-            Electric_Claw:Set("âœ…: Electric Claw")
+            Electric_Claw:Set("✅: Electric Claw")
         end
         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon",true) == 1 then
-            Dragon_Talon:Set("âœ…: Dragon Talon")
+            Dragon_Talon:Set("✅: Dragon Talon")
         end
     end
 end)
 
 H:Seperator("Gun")
 
-local Kabu_cha = H:Label("âŒ: Kabucha")
-local Acidum_Rifle = H:Label("âŒ: Acidum Rifle")
-local Bizarre_Rifle = H:Label("âŒ: Bizarre Rifle")
+local Kabu_cha = H:Label("❌: Kabucha")
+local Acidum_Rifle = H:Label("❌: Acidum Rifle")
+local Bizarre_Rifle = H:Label("❌: Bizarre Rifle")
 
 spawn(function()
     while task.wait() do
         pcall(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                 if v.Name == "Kabucha" then
-                    Kabu_cha:Set("âœ…: Kabucha")
+                    Kabu_cha:Set("✅: Kabucha")
                 end
                 if v.Name == "Acidum Rifle" then
-                    Acidum_Rifle:Set("âœ…: Acidum Rifle")
+                    Acidum_Rifle:Set("✅: Acidum Rifle")
                 end
                 if v.Name == "Bizarre Rifle" then
-                    Bizarre_Rifle:Set("âœ…: Bizarre Rifle")
+                    Bizarre_Rifle:Set("✅: Bizarre Rifle")
                 end
             end
         end)
@@ -4216,11 +4204,11 @@ end)
 
 H:Seperator("Accessory")
 
-local Dark_Coat = H:Label("âŒ: Dark Coat")
-local Ghoul_Mask = H:Label("âŒ: Ghoul Mask")
-local Swan_Glass = H:Label("âŒ: Swan Glass")
-local Pale_Scarf = H:Label("âŒ: Pale Scarf")
-local Valkyrie_Helm = H:Label("âŒ: Valkyrie Helm")
+local Dark_Coat = H:Label("❌: Dark Coat")
+local Ghoul_Mask = H:Label("❌: Ghoul Mask")
+local Swan_Glass = H:Label("❌: Swan Glass")
+local Pale_Scarf = H:Label("❌: Pale Scarf")
+local Valkyrie_Helm = H:Label("❌: Valkyrie Helm")
 
 
 spawn(function()
@@ -4228,23 +4216,115 @@ spawn(function()
         pcall(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                 if v.Name == "Saber" then
-                    Dark_Coat:Set("âœ…: Dark Coat")
+                    Dark_Coat:Set("✅: Dark Coat")
                 end
                 if v.Name == "Ghoul Mask" then
-                    Ghoul_Mask:Set("âœ…: Ghoul Mask")
+                    Ghoul_Mask:Set("✅: Ghoul Mask")
                 end
                 if v.Name == "Swan Glasses" then
-                    Swan_Glass:Set("âœ…: Swan Glass")
+                    Swan_Glass:Set("✅: Swan Glass")
                 end
                 if v.Name == "Pale Scarf" then
-                    Pale_Scarf:Set("âœ…: Pale Scarf")
+                    Pale_Scarf:Set("✅: Pale Scarf")
                 end
                 if v.Name == "Valkyrie Helmet" then
-                    Valkyrie_Helm:Set("âœ…: Valkyrie Helmet")
+                    Valkyrie_Helm:Set("✅: Valkyrie Helmet")
                 end
             end
         end)
     end
+end)
+
+XM:Seperator("Gift Event")
+
+local Remotes = game:GetService("ReplicatedStorage").Remotes.CommF_
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+local Workspace = game.Workspace
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
+local itemsToBuy = {
+    [1] = {
+        [1] = "exp x2",
+        [2] = "stats refund",
+        [3] = "race reroll"
+    },
+    [2] = {
+        [1] = "fragment 250",
+        [2] = "fragment 500"
+    },
+    [3] = {
+        [1] = "Elf hat",
+        [2] = "Santa hat",
+        [3] = "Sleigh"
+    }
+}
+
+local function buyItem(category, itemNumber)
+    Remotes:InvokeServer('Candies', 'Buy', category, itemNumber)
+end
+
+local function moveToPresent()
+    HumanoidRootPart.CFrame = Workspace._WorldOrigin.Present.Root.CFrame
+    wait(0.5)
+    VirtualInputManager.InputBegan:Fire(game, Enum.KeyCode.E, false)
+    wait(0.1)
+    VirtualInputManager.InputEnded:Fire(game, Enum.KeyCode.E, false)
+end
+
+candycheck = XM:Label("Your Candies: Third World ")
+
+    spawn(function()
+        while wait() do
+            pcall(function()
+                candycheck:Set("Your Candies: "..(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Candies","Check")))
+            end)
+        end
+    end)
+ 
+ XM:Seperator("TP LOCATION")
+    
+XM:Button("Teleport To Green Circle Event", function()
+  local greencircle = CFrame.new(-1076, 15, -14475)
+    if ByPassTP then
+      BTP(greencircle)
+    else
+      Tween(greencircle)
+    end
+    wait(0.5)
+    VirtualInputManager.InputBegan:Fire(game, Enum.KeyCode.E, false)
+    wait(0.1)
+    VirtualInputManager.InputEnded:Fire(game, Enum.KeyCode.E, false)
+end)
+
+XM:Seperator("SHOP")
+
+XM:Button("Buy Exp x2 > 50 Candy", function()
+    buyItem(1, 1)
+end)
+XM:Button("Buy Race Reroll > 100 Candy", function()
+    buyItem(1, 3)
+end)
+
+XM:Button("Buy Fragment 250 > 50 Candy", function()
+    buyItem(2, 1)
+end)
+
+XM:Button("Buy Fragment 500 > 100 Candy", function()
+    buyItem(2, 2)
+end)
+
+XM:Button("Buy Elf Hat > 250 Candy", function()
+    buyItem(3, 1)
+end)
+
+XM:Button("Buy Santa Hat > 500 Candy", function()
+    buyItem(3, 2)
+end)
+
+XM:Button("Buy Sleigh > 1000 Candy", function()
+    buyItem(3, 3)
 end)
 
 Main:Seperator("Farm")
@@ -5700,7 +5780,7 @@ end)
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
     Mirragecheck:Set('ðŸï¸: Mystic Island Spawning')
     else
-      Mirragecheck:Set('âŒ: Mystic Island Not Found ' )end
+      Mirragecheck:Set('❌: Mystic Island Not Found ' )end
             end
         end)
 end)
@@ -7170,7 +7250,7 @@ spawn(function()
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
                 FrozenIsland:Set('ðŸï¸: Frozen Dimension Spawning')
             else
-                FrozenIsland:Set('âŒ: Frozen Dimension Not Found')
+                FrozenIsland:Set('❌: Frozen Dimension Not Found')
             end
         end
     end)
@@ -7480,7 +7560,7 @@ wait(0.5)
 elseif state and (not findItem("Monster Magnet", 1) or not findItem("Terror Eyes", 2) and not findItem("Electric Wing", 8) and not findItem("Fool's Gold", 20) and not findItem("Shark Tooth", 10)) then
     _G.BjirAnchorCuy = false
     game.StarterGui:SetCore("SendNotification", {
-        Icon = "rbxassetid://14601663040",
+        Icon = "rbxassetid://",
         Title = "! WARNING !", 
         Text = "You need more materials \nto buy a Monster Magnet."
     })
@@ -11210,8 +11290,7 @@ spawn(function()
 	end)
     
     if World1 or World2 then
-RaceV4:Label("IND: Harus ke third sea bre ðŸ˜")
-RaceV4:Label("ENG: Pls Go To The Third Sea")
+RaceV4:Label("ONLY WORK IN WORLD 3")
 end
 
 if World3 then
@@ -11894,9 +11973,9 @@ end
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 1') then
-    Island1:Set('âœ…: Island 1')
+    Island1:Set('✅: Island 1')
     else
-      Island1:Set('âŒ: Island 1' )end
+      Island1:Set('❌: Island 1' )end
             end
         end)
 end)
@@ -11905,9 +11984,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 2') then
-    Island2:Set('âœ…: Island 2')
+    Island2:Set('✅: Island 2')
     else
-      Island2:Set('âŒ: Island 2' )end
+      Island2:Set('❌: Island 2' )end
             end
         end)
 end)
@@ -11916,9 +11995,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 3') then
-    Island3:Set('âœ…: Island 3')
+    Island3:Set('✅: Island 3')
     else
-      Island3:Set('âŒ: Island 3' )end
+      Island3:Set('❌: Island 3' )end
             end
         end)
 end)
@@ -11927,9 +12006,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 4') then
-    Island4:Set('âœ…: Island 4')
+    Island4:Set('✅: Island 4')
     else
-      Island4:Set('âŒ: Island 4' )end
+      Island4:Set('❌: Island 4' )end
             end
         end)
 end)
@@ -11938,9 +12017,9 @@ spawn(function()
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Island 5') then
-    Island5:Set('âœ…: Island 5')
+    Island5:Set('✅: Island 5')
     else
-      Island5:Set('âŒ: Island 5' )end
+      Island5:Set('❌: Island 5' )end
             end
         end)
 end)
