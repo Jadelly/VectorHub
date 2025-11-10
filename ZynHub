@@ -2008,7 +2008,7 @@
 		TabWidth = 160,
 		Theme = "AMOLED",
 		Acrylic = false,
-		Size = UDim2.fromOffset(530, 350),
+		Size = UDim2.fromOffset(450, 300),
 		MinimizeKey = Enum.KeyCode.End
 	})
 
@@ -2070,9 +2070,9 @@
     Default = false
 })
 
-local knockDelay = 1
+local knockDelay = 2
 local doorDelay = 5
-local trickDelay = 0.3
+local trickDelay = 1
 
 
 
@@ -2087,9 +2087,10 @@ local DoorBySea = {
         CFrame.new(722.841309,7.79379559,1444.29028,0.977708578,-4.91986221e-08,-0.209966481,3.68222004e-08,1,-6.2854042e-08,0.209966481,5.37215108e-08,0.977708578)
     },
     World2 = {
-        CFrame.new(-61.5351906,74.4224091,-402.107605,-0.707134247,0,-0.707079291,0,1,0,0.707079291,0,-0.707134247),
-        CFrame.new(69.3701019,75.8226624,-470.087311,0.74314785,0,-0.669127226,0,1,0,0.669127226,0,0.74314785),
-        CFrame.new(-11.9682884,74.4216156,-549.419861,-1,0,0,0,1,0,0,0,-1)
+        CFrame.new(-40.7430687, 74.0055161, 313.389679, 0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, 0.707134247),
+        CFrame.new(-11.9669142, 74.4698639, 557.628052, -1, 0, 0, 0, 1, 0, 0, 0, -1),
+        CFrame.new(-775.19635, 74.619873, 216.26265, 0.999847949, 0, 0.017436387, 0, 1, 0, -0.017436387, 0, 0.999847949),
+        CFrame.new(181.565262, 74.7508545, 471.66449, -0.694649816, 0, -0.719348073, 0, 1, 0, 0.719348073, 0, -0.694649816)
     },
     World3 = {
         CFrame.new(-12257.124,334.613007,-7417.19434,-0.996191859,0,-0.0871884301,0,1,0,0.0871884301,0,-0.996191859),
@@ -2218,25 +2219,13 @@ spawn(function()
     end
 end)
 
-local HalloweenGacha = Tabs.Halloween:AddToggle("HalloweenGacha", {
-    Title = "Auto Halloween Gacha",
-    Description = "",
-    Default = false
-})
-
-HalloweenGacha:OnChanged(function(value)
-    _G.HalloweenGacha2025 = value
-end)
-
-task.spawn(function()
-    while task.wait(1.5) do
-        pcall(function()
-            if _G.HalloweenGacha2025 then
-                replicated.Remotes.CommF_:InvokeServer("Cousin", "HalloweenGacha25")
-            end
-        end)
-    end
-end)
+Tabs.Halloween:AddButton({
+		Title = "Halloween Gacha",
+		Description = "",
+		Callback = function()
+			replicated.Remotes.CommF_:InvokeServer("Cousin", "HalloweenGacha25")
+		end
+	})
 
 local AutoWerewolf = Tabs.Halloween:AddToggle("AutoWerewolf", {
     Title = "Auto Defeat Werewolf",
